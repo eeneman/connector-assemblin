@@ -14,7 +14,7 @@ ${CONNECTOR_URL}             http://localhost:8080
 ${CONNECTOR_PATH}            /assemblin/translator/v1/fetch
 ${APP_TOKEN}                 %{POT_APP_ACCESS_TOKEN}
 ${CLIENT_SECRET}             %{POT_CLIENT_SECRET}
-${PRODUCT_CODE}             %{POT_PRODUCT_CODE}
+${PRODUCT_CODE}              %{POT_PRODUCT_CODE}
 ${ID_PROPERTY}               AI200
 ${ID_ROOM}                   A4018
 
@@ -129,7 +129,6 @@ fetch, 422, Missing data for dataTypes required field
     Integer    response body error status                                   502
     Integer    response body error translator_response status               422
     String     response body error translator_response data error message parameters.dataTypes 0             Missing data for required field.
-    String     response body error translator_response data error message parameters.dataTypes[0] 0          Missing data for required field.
 
 fetch, 422, Empty ids
     [Tags]                 bug-0005
@@ -142,12 +141,10 @@ fetch, 422, Empty ids
     String     response body error translator_response data error message parameters.ids[0].idRoom 0          Missing data for required field.
     String     response body error translator_response data error message parameters.ids[0].idProperty 0      Missing data for required field.
 
-fetch, 422, Empty dataTypes
+fetch, 200, Empty dataTypes
     [Tags]                 bug-0006
     ${body}                Get Body
     Set To Dictionary      ${body["parameters"]}                dataTypes=@{EMPTY}
     Fetch Data Product     ${body}
-    Integer    response status                                              502
-    Integer    response body error status                                   502
-    Integer    response body error translator_response status               422
-    String     response body error translator_response data error message parameters.dataTypes[0] 0          Missing data for required field.
+    Integer    response status                                              200
+    Array      response body data sensors
