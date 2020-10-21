@@ -1,5 +1,5 @@
 {
-  "name": "digitransit-connector",
+  "name": "connector-assemblin",
   "version": "1.0.0",
   "description": "",
   "main": "build/server.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Metatavu/digitransit-connector.git"
+    "url": "git+https://github.com/PlatformOfTrust/connector-assemblin.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Metatavu/digitransit-connector/issues"
+    "url": "https://github.com/PlatformOfTrust/connector-assemblin/issues"
   },
-  "homepage": "https://github.com/Metatavu/digitransit-connector#readme",
+  "homepage": "https://github.com/PlatformOfTrust/connector-assemblin#assemblin-connector",
   "dependencies": {
     "@types/cors": "^2.8.7",
     "@types/express": "^4.17.8",
