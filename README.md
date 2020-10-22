@@ -21,7 +21,7 @@ TRANSLATOR_DOMAIN
 
 Set environmet variables by executing a container with an ```.env``` file attached like so:
 ```
-docker run -p 8080:8080 --env-file ~/Path/to/.env  metatavu/digitransit:2020-09-30_135500-test
+docker run -p 8080:8080 --env-file ~/Path/to/.env  metatavu/assemblin:latest
 ```
 
 Contents of ```.env``` file are the following:
@@ -42,7 +42,7 @@ config/definitions/pot.js
 
 ## Request body examples
 
-Below are few examples of a Digitransit request body and parameters
+Below are few examples of the Assemblin request body and parameters
 
 ```
 {
