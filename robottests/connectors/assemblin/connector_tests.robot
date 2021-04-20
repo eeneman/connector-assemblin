@@ -20,6 +20,8 @@ ${ID_ROOM}                   A4018
 
 ${DATA_TYPE_1}               MeasureAirCO2LevelPPM
 ${DATA_TYPE_2}               MeasureAirTemperatureCelsiusDegree
+${DATA_TYPE_3}               MeasureAirHumidityPercent
+${DATA_TYPE_4}               MeasureOccupancy
 
 &{IDS_PARAMETERS}            idProperty=${ID_PROPERTY}
 ...                          idRoom=${ID_ROOM}
@@ -28,6 +30,8 @@ ${DATA_TYPE_2}               MeasureAirTemperatureCelsiusDegree
 
 @{DATA_TYPES_LIST}           ${DATA_TYPE_1}
 ...                          ${DATA_TYPE_2}
+...                          ${DATA_TYPE_3}
+...                          ${DATA_TYPE_4}
 
 # @{DATA_TYPES}                &{DATA_TYPES_LIST}
 

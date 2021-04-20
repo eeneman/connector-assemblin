@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.5 on darwin)" generated="20201020 15:55:31.114" rpa="false">
-<suite id="s1" name="Connector Tests" source="/Users/daniilsmirnov/Connector Engine/assemblin-connector/robottests/connectors/assemblin/connector_tests.robot">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210420 11:24:18.741" rpa="false">
+<suite id="s1" name="Connector Tests" source="D:\POT\POT-ASSEMBLIN\20-04-2021\connector-assemblin\robottests\connectors\assemblin\connector_tests.robot">
 <test id="s1-t1" name="fetch, 200">
 <kw name="Get Body">
 <assign>
@@ -15,8 +15,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20201020 15:55:31.550" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}}</msg>
-<status status="PASS" starttime="20201020 15:55:31.549" endtime="20201020 15:55:31.550"></status>
+<msg timestamp="20210420 11:24:19.854" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:24:19.853" endtime="20210420 11:24:19.854"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -27,8 +27,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20201020 15:55:31.550" level="INFO">${now} = 2020-10-20T12:55:31+00:00</msg>
-<status status="PASS" starttime="20201020 15:55:31.550" endtime="20201020 15:55:31.550"></status>
+<msg timestamp="20210420 11:24:19.856" level="INFO">${now} = 2021-04-20T05:54:19+00:00</msg>
+<status status="PASS" starttime="20210420 11:24:19.855" endtime="20210420 11:24:19.856"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -37,7 +37,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:31.550" endtime="20201020 15:55:31.551"></status>
+<status status="PASS" starttime="20210420 11:24:19.857" endtime="20210420 11:24:19.857"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -45,7 +45,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:31.551" endtime="20201020 15:55:31.551"></status>
+<status status="PASS" starttime="20210420 11:24:19.857" endtime="20210420 11:24:19.859"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the result.</doc>
@@ -56,11 +56,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20201020 15:55:31.551" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree"]}, "timestamp": "202...</msg>
-<status status="PASS" starttime="20201020 15:55:31.551" endtime="20201020 15:55:31.552"></status>
+<msg timestamp="20210420 11:24:19.862" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree", "MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:24:19.859" endtime="20210420 11:24:19.862"></status>
 </kw>
-<msg timestamp="20201020 15:55:31.552" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}, 'timestamp': '202...</msg>
-<status status="PASS" starttime="20201020 15:55:31.549" endtime="20201020 15:55:31.552"></status>
+<msg timestamp="20210420 11:24:19.863" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:24:19.852" endtime="20210420 11:24:19.863"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -74,16 +74,16 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20201020 15:55:31.553" level="INFO">${signature} = iTrH22SW61V75ublZFPgiXwXuAi8k4crQedAhX+rqw0=</msg>
-<status status="PASS" starttime="20201020 15:55:31.552" endtime="20201020 15:55:31.553"></status>
+<msg timestamp="20210420 11:24:19.872" level="INFO">${signature} = P6hGRf+u3MMauN96gR1rAslvfD+WoeNTb5XWsByFTvg=</msg>
+<status status="PASS" starttime="20210420 11:24:19.868" endtime="20210420 11:24:19.873"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${signature}</arg>
 </arguments>
-<msg timestamp="20201020 15:55:31.553" level="INFO">iTrH22SW61V75ublZFPgiXwXuAi8k4crQedAhX+rqw0=</msg>
-<status status="PASS" starttime="20201020 15:55:31.553" endtime="20201020 15:55:31.553"></status>
+<msg timestamp="20210420 11:24:19.873" level="INFO">P6hGRf+u3MMauN96gR1rAslvfD+WoeNTb5XWsByFTvg=</msg>
+<status status="PASS" starttime="20210420 11:24:19.873" endtime="20210420 11:24:19.877"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -93,7 +93,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:31.553" endtime="20201020 15:55:31.554"></status>
+<status status="PASS" starttime="20210420 11:24:19.878" endtime="20210420 11:24:19.879"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -101,10 +101,10 @@
 </tags>
 <doc>*Sends a POST request to the endpoint.*</doc>
 <arguments>
-<arg>${API_PATH}</arg>
+<arg>${CONNECTOR_PATH}</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:31.554" endtime="20201020 15:55:36.024"></status>
+<status status="PASS" starttime="20210420 11:24:19.880" endtime="20210420 11:24:31.427"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -114,7 +114,7 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20201020 15:55:36.024" level="INFO">
+<msg timestamp="20210420 11:24:31.427" level="INFO">
 {
     "type": "object",
     "properties": {
@@ -173,12 +173,20 @@
                         {
                             "measurements": [
                                 {
-                                    "value": "20.200001",
+                                    "value": "20.800001",
                                     "@type": "MeasureAirTemperatureCelsiusDegree"
                                 },
                                 {
-                                    "value": "433.000000",
+                                    "value": "421.000000",
                                     "@type": "MeasureAirCO2LevelPPM"
+                                },
+                                {
+                                    "value": "0",
+                                    "@type": "MeasureOccupancy"
+                                },
+                                {
+                                    "value": "17.299999",
+                                    "@type": "MeasureAirHumidityPercent"
                                 }
                             ],
                             "id": {
@@ -202,15 +210,15 @@
                 },
                 "created": {
                     "type": "string",
-                    "default": "2020-10-20T12:55:35+00:00"
+                    "default": "2021-04-20T11:24:28+05:30"
                 },
                 "creator": {
                     "type": "string",
-                    "default": "https:///assemblin/translator/v1/public.key"
+                    "default": "https://localhost/assemblin/translator/v1/public.key"
                 },
                 "signatureValue": {
                     "type": "string",
-                    "default": "OU6rRJw47+1P9CEcsr73m05azaRHV+OpS/34zDAY3GlYX4TuW9TWcPJrIo5L6ZUeoV8ulZ96tUVwTOMjLC2+sQYgG+lzxOYCueDfNWh07y1oYo2Yexir4RsMaRdVa4e7x/DTOBjJo6+8t09QlHUqOstyW18vqdhptrQZIFzuzpUD0VC8JxqKwSTJpmJfciiIbjl6TUXLjpKqK/zEz0zk5SSKyN9tnB0dhQvKIrBGUVVDsDNiPSdT5im3DfcRwS/r/iTtPvOHxeoHJUw34JiP285b9YoJN8qC7rXjaHTYVHTTemNLapxOtgGdItxLsByvhzvdA1vFavKkT4dea6cEHi89x1Gu3OtuX+5VMJuji+RypXxBbaCTCHdxQx64pIMsJCV8056M0I4NlPQnv1nW+QbCAj7udiR1GyeJ8y6HaJGMCqY1i+uqrsMHCB6WlRHXTYRBj04oAYCkGL/Po+qUWhta6C0lxL5r+WpLJT08VQ+YqSPZNe8p2JBbhAMSEW6qz/QeDHUAIJo4GIFGNWeBLNdxEIM7uWkuuLfqXdfrOTlVRk0Dx5zfkFrEL/Y4cQai5U3DNzm5nJLV/To0+O5945ZpJuV6skHBFzQeOiewJIWcp0RoYowDDW7EKs3+251VfKJlwE9oOf9WYelkBBmlc8wamjE6xWjXMNN5vEo0fQU="
+                    "default": "CnPi+JYivzSHGrx60SK83pEyYMGtCw8c2Ft8KaONtcPP/XpsuMhVavn9aCT+iGzMoHWOkxIKP7zgF/nIf2a+FV0P3/qbMjt3kiLhSSTxxXqpw48m+EDLcxc0FG+XFma6j3V3CrMiWRGfORkKg48LrPk/oaGNh4Zxu5k58xYMRcOnhLaEcHQ8bUOs8aRQbEOajA4VdAVfZU3hPBZZZVOflOLyH2I+vEN2Hq9UX/y/dUGqB8g/XCmMNmmr+g5BEo1ZZYwFmGpU1ifL7/El/54mU4/8QmolsOoW5Poh+3WaKmTJpDSNu6XCmGBj6r/3riYY6M6vIJpA+OGieJaV+rd8/RljdjtLM3kFyIDnCnrWZIegNSg1S2UGF+HCDTt3q1yIoVO0y0s9o9pp18iJEvD66nvdB/0iiRlvqB6VIeWXSTPRv6IF74Myu/5BtyEheS1cPqcF7Ydinkp24W6Iy3L2LNyqbSG7ObMrmd8Wx6aze4DondU+0xR3nxqD09lZL+7lFpwBkQ5nPPsI7rzIizQ/VA9xU5fPUu9PRp1TqRe+bXDzeQLLV6RnaNRoGU9jLzmPpLS0+UObBoH45d7lrgpsrz3pqstRUPI7swoEwbaqmkI/h+0AqHRLFGOiaEAyZlMj6OKPpeKFMf4sOHB4jxzqkFlBhMtrkZ8OuMnF/dG7kzU="
                 }
             },
             "required": [
@@ -227,9 +235,9 @@
         "signature"
     ]
 }</msg>
-<status status="PASS" starttime="20201020 15:55:36.024" endtime="20201020 15:55:36.041"></status>
+<status status="PASS" starttime="20210420 11:24:31.427" endtime="20210420 11:24:31.463"></status>
 </kw>
-<status status="PASS" starttime="20201020 15:55:31.552" endtime="20201020 15:55:36.042"></status>
+<status status="PASS" starttime="20210420 11:24:19.867" endtime="20210420 11:24:31.463"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -240,7 +248,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.042" endtime="20201020 15:55:36.042"></status>
+<status status="PASS" starttime="20210420 11:24:31.484" endtime="20210420 11:24:31.492"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -251,7 +259,7 @@
 <arg>response body @context</arg>
 <arg>https://standards-ontotest.oftrust.net/v2/Context/DataProductOutput/Sensor/</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.043" endtime="20201020 15:55:36.043"></status>
+<status status="PASS" starttime="20210420 11:24:31.520" endtime="20210420 11:24:31.521"></status>
 </kw>
 <kw name="Object" library="REST">
 <tags>
@@ -261,7 +269,7 @@
 <arguments>
 <arg>response body data</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.043" endtime="20201020 15:55:36.044"></status>
+<status status="PASS" starttime="20210420 11:24:31.531" endtime="20210420 11:24:31.537"></status>
 </kw>
 <kw name="Array" library="REST">
 <tags>
@@ -271,7 +279,7 @@
 <arguments>
 <arg>response body data sensors</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.044" endtime="20201020 15:55:36.045"></status>
+<status status="PASS" starttime="20210420 11:24:31.541" endtime="20210420 11:24:31.550"></status>
 </kw>
 <kw name="Array" library="REST">
 <tags>
@@ -281,7 +289,7 @@
 <arguments>
 <arg>response body data sensors 0 measurements</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.045" endtime="20201020 15:55:36.046"></status>
+<status status="PASS" starttime="20210420 11:24:31.570" endtime="20210420 11:24:31.573"></status>
 </kw>
 <kw name="Object" library="REST">
 <tags>
@@ -291,12 +299,12 @@
 <arguments>
 <arg>response body data sensors 0 id</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.046" endtime="20201020 15:55:36.047"></status>
+<status status="PASS" starttime="20210420 11:24:31.593" endtime="20210420 11:24:31.602"></status>
 </kw>
 <tags>
 <tag>bug-0001</tag>
 </tags>
-<status status="PASS" starttime="20201020 15:55:31.548" endtime="20201020 15:55:36.047" critical="yes"></status>
+<status status="PASS" starttime="20210420 11:24:19.849" endtime="20210420 11:24:31.621" critical="yes"></status>
 </test>
 <test id="s1-t2" name="fetch, 422, Missing data for timestamp required field">
 <kw name="Get Body">
@@ -312,8 +320,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.049" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}}</msg>
-<status status="PASS" starttime="20201020 15:55:36.048" endtime="20201020 15:55:36.049"></status>
+<msg timestamp="20210420 11:24:31.694" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:24:31.693" endtime="20210420 11:24:31.694"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -324,8 +332,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.049" level="INFO">${now} = 2020-10-20T12:55:36+00:00</msg>
-<status status="PASS" starttime="20201020 15:55:36.049" endtime="20201020 15:55:36.049"></status>
+<msg timestamp="20210420 11:24:31.696" level="INFO">${now} = 2021-04-20T05:54:31+00:00</msg>
+<status status="PASS" starttime="20210420 11:24:31.695" endtime="20210420 11:24:31.700"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -334,7 +342,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.049" endtime="20201020 15:55:36.049"></status>
+<status status="PASS" starttime="20210420 11:24:31.701" endtime="20210420 11:24:31.705"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -342,7 +350,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.049" endtime="20201020 15:55:36.050"></status>
+<status status="PASS" starttime="20210420 11:24:31.705" endtime="20210420 11:24:31.706"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the result.</doc>
@@ -353,11 +361,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.050" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree"]}, "timestamp": "202...</msg>
-<status status="PASS" starttime="20201020 15:55:36.050" endtime="20201020 15:55:36.050"></status>
+<msg timestamp="20210420 11:24:31.712" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree", "MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:24:31.706" endtime="20210420 11:24:31.712"></status>
 </kw>
-<msg timestamp="20201020 15:55:36.050" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}, 'timestamp': '202...</msg>
-<status status="PASS" starttime="20201020 15:55:36.048" endtime="20201020 15:55:36.050"></status>
+<msg timestamp="20210420 11:24:31.717" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:24:31.675" endtime="20210420 11:24:31.718"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -365,7 +373,7 @@
 <arg>${body}</arg>
 <arg>timestamp</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.051" endtime="20201020 15:55:36.051"></status>
+<status status="PASS" starttime="20210420 11:24:31.723" endtime="20210420 11:24:31.725"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -379,16 +387,16 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.052" level="INFO">${signature} = H43VQDzmlgqK+yqar6AUe9hckDi4V0wKjVhejTgJeVE=</msg>
-<status status="PASS" starttime="20201020 15:55:36.051" endtime="20201020 15:55:36.052"></status>
+<msg timestamp="20210420 11:24:31.742" level="INFO">${signature} = AFtgvsq742+XpAlalkQunbve0+FhGroCc92zIVFpUAM=</msg>
+<status status="PASS" starttime="20210420 11:24:31.741" endtime="20210420 11:24:31.742"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${signature}</arg>
 </arguments>
-<msg timestamp="20201020 15:55:36.052" level="INFO">H43VQDzmlgqK+yqar6AUe9hckDi4V0wKjVhejTgJeVE=</msg>
-<status status="PASS" starttime="20201020 15:55:36.052" endtime="20201020 15:55:36.052"></status>
+<msg timestamp="20210420 11:24:31.743" level="INFO">AFtgvsq742+XpAlalkQunbve0+FhGroCc92zIVFpUAM=</msg>
+<status status="PASS" starttime="20210420 11:24:31.742" endtime="20210420 11:24:31.743"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -398,7 +406,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.052" endtime="20201020 15:55:36.052"></status>
+<status status="PASS" starttime="20210420 11:24:31.743" endtime="20210420 11:24:31.744"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -406,10 +414,10 @@
 </tags>
 <doc>*Sends a POST request to the endpoint.*</doc>
 <arguments>
-<arg>${API_PATH}</arg>
+<arg>${CONNECTOR_PATH}</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.052" endtime="20201020 15:55:36.192"></status>
+<status status="PASS" starttime="20210420 11:24:31.744" endtime="20210420 11:26:37.547"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -419,7 +427,7 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20201020 15:55:36.192" level="INFO">
+<msg timestamp="20210420 11:26:37.552" level="INFO">
 {
     "type": "object",
     "properties": {
@@ -428,24 +436,11 @@
             "properties": {
                 "status": {
                     "type": "integer",
-                    "default": 422
+                    "default": 500
                 },
                 "message": {
-                    "type": "object",
-                    "properties": {
-                        "timestamp": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            },
-                            "default": [
-                                "Missing data for required field."
-                            ]
-                        }
-                    },
-                    "required": [
-                        "timestamp"
-                    ]
+                    "type": "string",
+                    "default": "Request failed with status code 404"
                 }
             },
             "required": [
@@ -458,9 +453,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20201020 15:55:36.192" endtime="20201020 15:55:36.194"></status>
+<status status="PASS" starttime="20210420 11:26:37.548" endtime="20210420 11:26:37.574"></status>
 </kw>
-<status status="PASS" starttime="20201020 15:55:36.051" endtime="20201020 15:55:36.194"></status>
+<status status="PASS" starttime="20210420 11:24:31.735" endtime="20210420 11:26:37.574"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -471,34 +466,25 @@
 <arg>response status</arg>
 <arg>422</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.194" endtime="20201020 15:55:36.195"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error status</arg>
-<arg>422</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:36.196" endtime="20201020 15:55:36.196"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error message timestamp 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:36.197" endtime="20201020 15:55:36.197"></status>
+<msg timestamp="20210420 11:26:37.586" level="FAIL">500 is not one of [422]
+
+Failed validating 'enum' in schema:
+    {'enum': [422], 'type': 'integer'}
+
+On instance:
+    500</msg>
+<status status="FAIL" starttime="20210420 11:26:37.581" endtime="20210420 11:26:37.587"></status>
 </kw>
 <tags>
 <tag>bug-0001</tag>
 </tags>
-<status status="PASS" starttime="20201020 15:55:36.047" endtime="20201020 15:55:36.198" critical="yes"></status>
+<status status="FAIL" starttime="20210420 11:24:31.658" endtime="20210420 11:26:37.588" critical="yes">500 is not one of [422]
+
+Failed validating 'enum' in schema:
+    {'enum': [422], 'type': 'integer'}
+
+On instance:
+    500</status>
 </test>
 <test id="s1-t3" name="fetch, 422, Missing data for parameters required field">
 <kw name="Get Body">
@@ -514,8 +500,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.200" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}}</msg>
-<status status="PASS" starttime="20201020 15:55:36.200" endtime="20201020 15:55:36.200"></status>
+<msg timestamp="20210420 11:26:37.601" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:37.600" endtime="20210420 11:26:37.601"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -526,8 +512,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.201" level="INFO">${now} = 2020-10-20T12:55:36+00:00</msg>
-<status status="PASS" starttime="20201020 15:55:36.201" endtime="20201020 15:55:36.201"></status>
+<msg timestamp="20210420 11:26:37.602" level="INFO">${now} = 2021-04-20T05:56:37+00:00</msg>
+<status status="PASS" starttime="20210420 11:26:37.601" endtime="20210420 11:26:37.602"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -536,7 +522,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.201" endtime="20201020 15:55:36.202"></status>
+<status status="PASS" starttime="20210420 11:26:37.602" endtime="20210420 11:26:37.603"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -544,7 +530,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.202" endtime="20201020 15:55:36.202"></status>
+<status status="PASS" starttime="20210420 11:26:37.603" endtime="20210420 11:26:37.603"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the result.</doc>
@@ -555,11 +541,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.203" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree"]}, "timestamp": "202...</msg>
-<status status="PASS" starttime="20201020 15:55:36.202" endtime="20201020 15:55:36.203"></status>
+<msg timestamp="20210420 11:26:37.606" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree", "MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:37.603" endtime="20210420 11:26:37.606"></status>
 </kw>
-<msg timestamp="20201020 15:55:36.203" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}, 'timestamp': '202...</msg>
-<status status="PASS" starttime="20201020 15:55:36.199" endtime="20201020 15:55:36.203"></status>
+<msg timestamp="20210420 11:26:37.606" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:37.599" endtime="20210420 11:26:37.606"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -567,7 +553,7 @@
 <arg>${body}</arg>
 <arg>parameters</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.203" endtime="20201020 15:55:36.204"></status>
+<status status="PASS" starttime="20210420 11:26:37.608" endtime="20210420 11:26:37.608"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -581,16 +567,16 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.204" level="INFO">${signature} = Y6a8VtHfk2vF3xuR9IlvsI7bHeGJLuPA5JKjQSqVcAA=</msg>
-<status status="PASS" starttime="20201020 15:55:36.204" endtime="20201020 15:55:36.204"></status>
+<msg timestamp="20210420 11:26:37.616" level="INFO">${signature} = wxSh3Jm34aTsLJtNZ+yhqkGwErtb854NBfF8dV/jNys=</msg>
+<status status="PASS" starttime="20210420 11:26:37.613" endtime="20210420 11:26:37.616"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${signature}</arg>
 </arguments>
-<msg timestamp="20201020 15:55:36.205" level="INFO">Y6a8VtHfk2vF3xuR9IlvsI7bHeGJLuPA5JKjQSqVcAA=</msg>
-<status status="PASS" starttime="20201020 15:55:36.204" endtime="20201020 15:55:36.205"></status>
+<msg timestamp="20210420 11:26:37.617" level="INFO">wxSh3Jm34aTsLJtNZ+yhqkGwErtb854NBfF8dV/jNys=</msg>
+<status status="PASS" starttime="20210420 11:26:37.617" endtime="20210420 11:26:37.617"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -600,7 +586,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.205" endtime="20201020 15:55:36.205"></status>
+<status status="PASS" starttime="20210420 11:26:37.618" endtime="20210420 11:26:37.619"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -608,10 +594,10 @@
 </tags>
 <doc>*Sends a POST request to the endpoint.*</doc>
 <arguments>
-<arg>${API_PATH}</arg>
+<arg>${CONNECTOR_PATH}</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.205" endtime="20201020 15:55:36.713"></status>
+<status status="PASS" starttime="20210420 11:26:37.619" endtime="20210420 11:26:39.675"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -621,127 +607,78 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20201020 15:55:36.714" level="INFO">
+<msg timestamp="20210420 11:26:39.680" level="INFO">
 {
     "type": "object",
     "properties": {
         "error": {
             "type": "object",
             "properties": {
-                "message": {
-                    "type": "string",
-                    "default": "External translator returns an invalid response."
-                },
                 "status": {
                     "type": "integer",
-                    "default": 502
+                    "default": 422
                 },
-                "translator_response": {
+                "message": {
                     "type": "object",
                     "properties": {
-                        "status": {
-                            "type": "integer",
-                            "default": 422
-                        },
-                        "data": {
-                            "type": "object",
-                            "properties": {
-                                "error": {
-                                    "type": "object",
-                                    "properties": {
-                                        "status": {
-                                            "type": "integer",
-                                            "default": 422
-                                        },
-                                        "message": {
-                                            "type": "object",
-                                            "properties": {
-                                                "parameters": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.ids": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.ids[0].idRoom": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.ids[0].idProperty": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.dataTypes": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.dataTypes[0]": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "parameters",
-                                                "parameters.dataTypes",
-                                                "parameters.dataTypes[0]",
-                                                "parameters.ids",
-                                                "parameters.ids[0].idProperty",
-                                                "parameters.ids[0].idRoom"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "message",
-                                        "status"
-                                    ]
-                                }
+                        "parameters": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
                             },
-                            "required": [
-                                "error"
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.ids": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.ids[0].idRoom": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.ids[0].idProperty": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.dataTypes": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
                             ]
                         }
                     },
                     "required": [
-                        "data",
-                        "status"
+                        "parameters",
+                        "parameters.dataTypes",
+                        "parameters.ids",
+                        "parameters.ids[0].idProperty",
+                        "parameters.ids[0].idRoom"
                     ]
                 }
             },
             "required": [
                 "message",
-                "status",
-                "translator_response"
+                "status"
             ]
         }
     },
@@ -749,9 +686,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20201020 15:55:36.713" endtime="20201020 15:55:36.719"></status>
+<status status="PASS" starttime="20210420 11:26:39.676" endtime="20210420 11:26:39.786"></status>
 </kw>
-<status status="PASS" starttime="20201020 15:55:36.204" endtime="20201020 15:55:36.719"></status>
+<status status="PASS" starttime="20210420 11:26:37.611" endtime="20210420 11:26:39.787"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -762,45 +699,25 @@
 <arg>response status</arg>
 <arg>502</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.720" endtime="20201020 15:55:36.720"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error status</arg>
-<arg>502</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:36.721" endtime="20201020 15:55:36.721"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error translator_response status</arg>
-<arg>422</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:36.722" endtime="20201020 15:55:36.722"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:36.722" endtime="20201020 15:55:36.723"></status>
+<msg timestamp="20210420 11:26:39.894" level="FAIL">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</msg>
+<status status="FAIL" starttime="20210420 11:26:39.881" endtime="20210420 11:26:39.895"></status>
 </kw>
 <tags>
 <tag>bug-0002</tag>
 </tags>
-<status status="PASS" starttime="20201020 15:55:36.198" endtime="20201020 15:55:36.723" critical="yes"></status>
+<status status="FAIL" starttime="20210420 11:26:37.597" endtime="20210420 11:26:39.914" critical="yes">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</status>
 </test>
 <test id="s1-t4" name="fetch, 422, Missing data for ids required field">
 <kw name="Get Body">
@@ -816,8 +733,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.725" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}}</msg>
-<status status="PASS" starttime="20201020 15:55:36.724" endtime="20201020 15:55:36.725"></status>
+<msg timestamp="20210420 11:26:40.037" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:40.037" endtime="20210420 11:26:40.037"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -828,8 +745,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.726" level="INFO">${now} = 2020-10-20T12:55:36+00:00</msg>
-<status status="PASS" starttime="20201020 15:55:36.725" endtime="20201020 15:55:36.726"></status>
+<msg timestamp="20210420 11:26:40.040" level="INFO">${now} = 2021-04-20T05:56:40+00:00</msg>
+<status status="PASS" starttime="20210420 11:26:40.038" endtime="20210420 11:26:40.040"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -838,7 +755,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.726" endtime="20201020 15:55:36.726"></status>
+<status status="PASS" starttime="20210420 11:26:40.041" endtime="20210420 11:26:40.042"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -846,7 +763,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.726" endtime="20201020 15:55:36.726"></status>
+<status status="PASS" starttime="20210420 11:26:40.042" endtime="20210420 11:26:40.043"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the result.</doc>
@@ -857,11 +774,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.727" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree"]}, "timestamp": "202...</msg>
-<status status="PASS" starttime="20201020 15:55:36.727" endtime="20201020 15:55:36.727"></status>
+<msg timestamp="20210420 11:26:40.043" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree", "MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:40.043" endtime="20210420 11:26:40.044"></status>
 </kw>
-<msg timestamp="20201020 15:55:36.727" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}, 'timestamp': '202...</msg>
-<status status="PASS" starttime="20201020 15:55:36.724" endtime="20201020 15:55:36.728"></status>
+<msg timestamp="20210420 11:26:40.044" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:40.036" endtime="20210420 11:26:40.044"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -869,7 +786,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>ids</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.728" endtime="20201020 15:55:36.728"></status>
+<status status="PASS" starttime="20210420 11:26:40.065" endtime="20210420 11:26:40.067"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -883,16 +800,16 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20201020 15:55:36.729" level="INFO">${signature} = i1Z/1ECUSgsvEWn1fVAeakj5GAX5mWcLndEZEwfNnGY=</msg>
-<status status="PASS" starttime="20201020 15:55:36.729" endtime="20201020 15:55:36.729"></status>
+<msg timestamp="20210420 11:26:40.072" level="INFO">${signature} = 2Nz/mBkP1zIS7cuojDjscNuxCjBOlIMkLX+f0Jfm9Tg=</msg>
+<status status="PASS" starttime="20210420 11:26:40.069" endtime="20210420 11:26:40.072"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${signature}</arg>
 </arguments>
-<msg timestamp="20201020 15:55:36.729" level="INFO">i1Z/1ECUSgsvEWn1fVAeakj5GAX5mWcLndEZEwfNnGY=</msg>
-<status status="PASS" starttime="20201020 15:55:36.729" endtime="20201020 15:55:36.730"></status>
+<msg timestamp="20210420 11:26:40.072" level="INFO">2Nz/mBkP1zIS7cuojDjscNuxCjBOlIMkLX+f0Jfm9Tg=</msg>
+<status status="PASS" starttime="20210420 11:26:40.072" endtime="20210420 11:26:40.072"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -902,7 +819,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.730" endtime="20201020 15:55:36.730"></status>
+<status status="PASS" starttime="20210420 11:26:40.073" endtime="20210420 11:26:40.074"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -910,10 +827,10 @@
 </tags>
 <doc>*Sends a POST request to the endpoint.*</doc>
 <arguments>
-<arg>${API_PATH}</arg>
+<arg>${CONNECTOR_PATH}</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:36.730" endtime="20201020 15:55:37.065"></status>
+<status status="PASS" starttime="20210420 11:26:40.074" endtime="20210420 11:26:42.084"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -923,97 +840,58 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20201020 15:55:37.066" level="INFO">
+<msg timestamp="20210420 11:26:42.085" level="INFO">
 {
     "type": "object",
     "properties": {
         "error": {
             "type": "object",
             "properties": {
-                "message": {
-                    "type": "string",
-                    "default": "External translator returns an invalid response."
-                },
                 "status": {
                     "type": "integer",
-                    "default": 502
+                    "default": 422
                 },
-                "translator_response": {
+                "message": {
                     "type": "object",
                     "properties": {
-                        "status": {
-                            "type": "integer",
-                            "default": 422
-                        },
-                        "data": {
-                            "type": "object",
-                            "properties": {
-                                "error": {
-                                    "type": "object",
-                                    "properties": {
-                                        "status": {
-                                            "type": "integer",
-                                            "default": 422
-                                        },
-                                        "message": {
-                                            "type": "object",
-                                            "properties": {
-                                                "parameters.ids": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.ids[0].idRoom": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.ids[0].idProperty": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "parameters.ids",
-                                                "parameters.ids[0].idProperty",
-                                                "parameters.ids[0].idRoom"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "message",
-                                        "status"
-                                    ]
-                                }
+                        "parameters.ids": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
                             },
-                            "required": [
-                                "error"
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.ids[0].idRoom": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.ids[0].idProperty": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
                             ]
                         }
                     },
                     "required": [
-                        "data",
-                        "status"
+                        "parameters.ids",
+                        "parameters.ids[0].idProperty",
+                        "parameters.ids[0].idRoom"
                     ]
                 }
             },
             "required": [
                 "message",
-                "status",
-                "translator_response"
+                "status"
             ]
         }
     },
@@ -1021,9 +899,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20201020 15:55:37.065" endtime="20201020 15:55:37.072"></status>
+<status status="PASS" starttime="20210420 11:26:42.084" endtime="20210420 11:26:42.093"></status>
 </kw>
-<status status="PASS" starttime="20201020 15:55:36.728" endtime="20201020 15:55:37.072"></status>
+<status status="PASS" starttime="20210420 11:26:40.068" endtime="20210420 11:26:42.094"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1034,67 +912,25 @@
 <arg>response status</arg>
 <arg>502</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.072" endtime="20201020 15:55:37.073"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error status</arg>
-<arg>502</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.073" endtime="20201020 15:55:37.074"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error translator_response status</arg>
-<arg>422</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.074" endtime="20201020 15:55:37.074"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.ids 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.075" endtime="20201020 15:55:37.075"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.ids[0].idRoom 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.075" endtime="20201020 15:55:37.076"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.ids[0].idProperty 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.076" endtime="20201020 15:55:37.077"></status>
+<msg timestamp="20210420 11:26:42.096" level="FAIL">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</msg>
+<status status="FAIL" starttime="20210420 11:26:42.094" endtime="20210420 11:26:42.096"></status>
 </kw>
 <tags>
 <tag>bug-0003</tag>
 </tags>
-<status status="PASS" starttime="20201020 15:55:36.723" endtime="20201020 15:55:37.077" critical="yes"></status>
+<status status="FAIL" starttime="20210420 11:26:40.014" endtime="20210420 11:26:42.097" critical="yes">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</status>
 </test>
 <test id="s1-t5" name="fetch, 422, Missing data for dataTypes required field">
 <kw name="Get Body">
@@ -1110,8 +946,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.078" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}}</msg>
-<status status="PASS" starttime="20201020 15:55:37.078" endtime="20201020 15:55:37.078"></status>
+<msg timestamp="20210420 11:26:42.102" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:42.101" endtime="20210420 11:26:42.102"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -1122,8 +958,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.079" level="INFO">${now} = 2020-10-20T12:55:37+00:00</msg>
-<status status="PASS" starttime="20201020 15:55:37.079" endtime="20201020 15:55:37.079"></status>
+<msg timestamp="20210420 11:26:42.103" level="INFO">${now} = 2021-04-20T05:56:42+00:00</msg>
+<status status="PASS" starttime="20210420 11:26:42.102" endtime="20210420 11:26:42.103"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1132,7 +968,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.079" endtime="20201020 15:55:37.079"></status>
+<status status="PASS" starttime="20210420 11:26:42.103" endtime="20210420 11:26:42.104"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1140,7 +976,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.079" endtime="20201020 15:55:37.080"></status>
+<status status="PASS" starttime="20210420 11:26:42.104" endtime="20210420 11:26:42.104"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the result.</doc>
@@ -1151,11 +987,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.080" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree"]}, "timestamp": "202...</msg>
-<status status="PASS" starttime="20201020 15:55:37.080" endtime="20201020 15:55:37.080"></status>
+<msg timestamp="20210420 11:26:42.105" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree", "MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:42.104" endtime="20210420 11:26:42.105"></status>
 </kw>
-<msg timestamp="20201020 15:55:37.080" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}, 'timestamp': '202...</msg>
-<status status="PASS" starttime="20201020 15:55:37.078" endtime="20201020 15:55:37.080"></status>
+<msg timestamp="20210420 11:26:42.106" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:42.100" endtime="20210420 11:26:42.106"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -1163,7 +999,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>dataTypes</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.081" endtime="20201020 15:55:37.081"></status>
+<status status="PASS" starttime="20210420 11:26:42.106" endtime="20210420 11:26:42.107"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -1177,16 +1013,16 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.082" level="INFO">${signature} = +0kuOFKthaS75h/CE7Rj4Fip2lHZPRziXrcgIoDDbf4=</msg>
-<status status="PASS" starttime="20201020 15:55:37.081" endtime="20201020 15:55:37.082"></status>
+<msg timestamp="20210420 11:26:42.109" level="INFO">${signature} = 5La5a3jiZUzVobDxozHpihZ7ywipnMyn69bU/brEKgY=</msg>
+<status status="PASS" starttime="20210420 11:26:42.108" endtime="20210420 11:26:42.109"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${signature}</arg>
 </arguments>
-<msg timestamp="20201020 15:55:37.082" level="INFO">+0kuOFKthaS75h/CE7Rj4Fip2lHZPRziXrcgIoDDbf4=</msg>
-<status status="PASS" starttime="20201020 15:55:37.082" endtime="20201020 15:55:37.082"></status>
+<msg timestamp="20210420 11:26:42.109" level="INFO">5La5a3jiZUzVobDxozHpihZ7ywipnMyn69bU/brEKgY=</msg>
+<status status="PASS" starttime="20210420 11:26:42.109" endtime="20210420 11:26:42.110"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -1196,7 +1032,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.082" endtime="20201020 15:55:37.082"></status>
+<status status="PASS" starttime="20210420 11:26:42.110" endtime="20210420 11:26:42.111"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -1204,10 +1040,10 @@
 </tags>
 <doc>*Sends a POST request to the endpoint.*</doc>
 <arguments>
-<arg>${API_PATH}</arg>
+<arg>${CONNECTOR_PATH}</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.083" endtime="20201020 15:55:37.598"></status>
+<status status="PASS" starttime="20210420 11:26:42.111" endtime="20210420 11:26:44.127"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -1217,87 +1053,38 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20201020 15:55:37.599" level="INFO">
+<msg timestamp="20210420 11:26:44.130" level="INFO">
 {
     "type": "object",
     "properties": {
         "error": {
             "type": "object",
             "properties": {
-                "message": {
-                    "type": "string",
-                    "default": "External translator returns an invalid response."
-                },
                 "status": {
                     "type": "integer",
-                    "default": 502
+                    "default": 422
                 },
-                "translator_response": {
+                "message": {
                     "type": "object",
                     "properties": {
-                        "status": {
-                            "type": "integer",
-                            "default": 422
-                        },
-                        "data": {
-                            "type": "object",
-                            "properties": {
-                                "error": {
-                                    "type": "object",
-                                    "properties": {
-                                        "status": {
-                                            "type": "integer",
-                                            "default": 422
-                                        },
-                                        "message": {
-                                            "type": "object",
-                                            "properties": {
-                                                "parameters.dataTypes": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.dataTypes[0]": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "parameters.dataTypes",
-                                                "parameters.dataTypes[0]"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "message",
-                                        "status"
-                                    ]
-                                }
+                        "parameters.dataTypes": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
                             },
-                            "required": [
-                                "error"
+                            "default": [
+                                "Missing data for required field."
                             ]
                         }
                     },
                     "required": [
-                        "data",
-                        "status"
+                        "parameters.dataTypes"
                     ]
                 }
             },
             "required": [
                 "message",
-                "status",
-                "translator_response"
+                "status"
             ]
         }
     },
@@ -1305,9 +1092,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20201020 15:55:37.599" endtime="20201020 15:55:37.602"></status>
+<status status="PASS" starttime="20210420 11:26:44.128" endtime="20210420 11:26:44.143"></status>
 </kw>
-<status status="PASS" starttime="20201020 15:55:37.081" endtime="20201020 15:55:37.602"></status>
+<status status="PASS" starttime="20210420 11:26:42.108" endtime="20210420 11:26:44.144"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1318,56 +1105,25 @@
 <arg>response status</arg>
 <arg>502</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.602" endtime="20201020 15:55:37.603"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error status</arg>
-<arg>502</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.603" endtime="20201020 15:55:37.604"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error translator_response status</arg>
-<arg>422</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.604" endtime="20201020 15:55:37.604"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.dataTypes 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.604" endtime="20201020 15:55:37.605"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.dataTypes[0] 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.605" endtime="20201020 15:55:37.606"></status>
+<msg timestamp="20210420 11:26:44.146" level="FAIL">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</msg>
+<status status="FAIL" starttime="20210420 11:26:44.144" endtime="20210420 11:26:44.146"></status>
 </kw>
 <tags>
 <tag>bug-0004</tag>
 </tags>
-<status status="PASS" starttime="20201020 15:55:37.077" endtime="20201020 15:55:37.606" critical="yes"></status>
+<status status="FAIL" starttime="20210420 11:26:42.099" endtime="20210420 11:26:44.147" critical="yes">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</status>
 </test>
 <test id="s1-t6" name="fetch, 422, Empty ids">
 <kw name="Get Body">
@@ -1383,8 +1139,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.607" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}}</msg>
-<status status="PASS" starttime="20201020 15:55:37.607" endtime="20201020 15:55:37.608"></status>
+<msg timestamp="20210420 11:26:44.158" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:44.157" endtime="20210420 11:26:44.158"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -1395,8 +1151,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.608" level="INFO">${now} = 2020-10-20T12:55:37+00:00</msg>
-<status status="PASS" starttime="20201020 15:55:37.608" endtime="20201020 15:55:37.608"></status>
+<msg timestamp="20210420 11:26:44.159" level="INFO">${now} = 2021-04-20T05:56:44+00:00</msg>
+<status status="PASS" starttime="20210420 11:26:44.158" endtime="20210420 11:26:44.159"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1405,7 +1161,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.608" endtime="20201020 15:55:37.608"></status>
+<status status="PASS" starttime="20210420 11:26:44.159" endtime="20210420 11:26:44.159"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1413,7 +1169,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.608" endtime="20201020 15:55:37.609"></status>
+<status status="PASS" starttime="20210420 11:26:44.160" endtime="20210420 11:26:44.160"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the result.</doc>
@@ -1424,11 +1180,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.609" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree"]}, "timestamp": "202...</msg>
-<status status="PASS" starttime="20201020 15:55:37.609" endtime="20201020 15:55:37.609"></status>
+<msg timestamp="20210420 11:26:44.161" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree", "MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:44.160" endtime="20210420 11:26:44.161"></status>
 </kw>
-<msg timestamp="20201020 15:55:37.609" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}, 'timestamp': '202...</msg>
-<status status="PASS" starttime="20201020 15:55:37.607" endtime="20201020 15:55:37.610"></status>
+<msg timestamp="20210420 11:26:44.161" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:44.156" endtime="20210420 11:26:44.161"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1436,7 +1192,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>ids=@{EMPTY}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.610" endtime="20201020 15:55:37.610"></status>
+<status status="PASS" starttime="20210420 11:26:44.162" endtime="20210420 11:26:44.163"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -1450,16 +1206,16 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.611" level="INFO">${signature} = mZQPN15iwXQWOip7inNAr/NNZJfII3DglA+E+lbf7R0=</msg>
-<status status="PASS" starttime="20201020 15:55:37.611" endtime="20201020 15:55:37.611"></status>
+<msg timestamp="20210420 11:26:44.164" level="INFO">${signature} = dgS6MsrK24oF82ArOrjsUeulehm3mh5q/yWQXSliTPM=</msg>
+<status status="PASS" starttime="20210420 11:26:44.163" endtime="20210420 11:26:44.164"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${signature}</arg>
 </arguments>
-<msg timestamp="20201020 15:55:37.611" level="INFO">mZQPN15iwXQWOip7inNAr/NNZJfII3DglA+E+lbf7R0=</msg>
-<status status="PASS" starttime="20201020 15:55:37.611" endtime="20201020 15:55:37.611"></status>
+<msg timestamp="20210420 11:26:44.164" level="INFO">dgS6MsrK24oF82ArOrjsUeulehm3mh5q/yWQXSliTPM=</msg>
+<status status="PASS" starttime="20210420 11:26:44.164" endtime="20210420 11:26:44.164"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -1469,7 +1225,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.611" endtime="20201020 15:55:37.612"></status>
+<status status="PASS" starttime="20210420 11:26:44.165" endtime="20210420 11:26:44.165"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -1477,10 +1233,10 @@
 </tags>
 <doc>*Sends a POST request to the endpoint.*</doc>
 <arguments>
-<arg>${API_PATH}</arg>
+<arg>${CONNECTOR_PATH}</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.612" endtime="20201020 15:55:37.985"></status>
+<status status="PASS" starttime="20210420 11:26:44.165" endtime="20210420 11:26:46.178"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -1490,87 +1246,48 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20201020 15:55:37.986" level="INFO">
+<msg timestamp="20210420 11:26:46.179" level="INFO">
 {
     "type": "object",
     "properties": {
         "error": {
             "type": "object",
             "properties": {
-                "message": {
-                    "type": "string",
-                    "default": "External translator returns an invalid response."
-                },
                 "status": {
                     "type": "integer",
-                    "default": 502
+                    "default": 422
                 },
-                "translator_response": {
+                "message": {
                     "type": "object",
                     "properties": {
-                        "status": {
-                            "type": "integer",
-                            "default": 422
-                        },
-                        "data": {
-                            "type": "object",
-                            "properties": {
-                                "error": {
-                                    "type": "object",
-                                    "properties": {
-                                        "status": {
-                                            "type": "integer",
-                                            "default": 422
-                                        },
-                                        "message": {
-                                            "type": "object",
-                                            "properties": {
-                                                "parameters.ids[0].idRoom": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                },
-                                                "parameters.ids[0].idProperty": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "parameters.ids[0].idProperty",
-                                                "parameters.ids[0].idRoom"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "message",
-                                        "status"
-                                    ]
-                                }
+                        "parameters.ids[0].idRoom": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
                             },
-                            "required": [
-                                "error"
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.ids[0].idProperty": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
                             ]
                         }
                     },
                     "required": [
-                        "data",
-                        "status"
+                        "parameters.ids[0].idProperty",
+                        "parameters.ids[0].idRoom"
                     ]
                 }
             },
             "required": [
                 "message",
-                "status",
-                "translator_response"
+                "status"
             ]
         }
     },
@@ -1578,9 +1295,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20201020 15:55:37.985" endtime="20201020 15:55:37.991"></status>
+<status status="PASS" starttime="20210420 11:26:46.178" endtime="20210420 11:26:46.198"></status>
 </kw>
-<status status="PASS" starttime="20201020 15:55:37.610" endtime="20201020 15:55:37.992"></status>
+<status status="PASS" starttime="20210420 11:26:44.163" endtime="20210420 11:26:46.199"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1591,56 +1308,25 @@
 <arg>response status</arg>
 <arg>502</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:37.992" endtime="20201020 15:55:37.993"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error status</arg>
-<arg>502</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.993" endtime="20201020 15:55:37.994"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error translator_response status</arg>
-<arg>422</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.994" endtime="20201020 15:55:37.995"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.ids[0].idRoom 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.995" endtime="20201020 15:55:37.996"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.ids[0].idProperty 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:37.996" endtime="20201020 15:55:37.997"></status>
+<msg timestamp="20210420 11:26:46.204" level="FAIL">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</msg>
+<status status="FAIL" starttime="20210420 11:26:46.200" endtime="20210420 11:26:46.204"></status>
 </kw>
 <tags>
 <tag>bug-0005</tag>
 </tags>
-<status status="PASS" starttime="20201020 15:55:37.606" endtime="20201020 15:55:37.997" critical="yes"></status>
+<status status="FAIL" starttime="20210420 11:26:44.155" endtime="20210420 11:26:46.205" critical="yes">422 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    422</status>
 </test>
 <test id="s1-t7" name="fetch, 422, Empty dataTypes">
 <kw name="Get Body">
@@ -1656,8 +1342,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20201020 15:55:37.999" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}}</msg>
-<status status="PASS" starttime="20201020 15:55:37.999" endtime="20201020 15:55:37.999"></status>
+<msg timestamp="20210420 11:26:46.213" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:46.212" endtime="20210420 11:26:46.213"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -1668,8 +1354,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20201020 15:55:38.000" level="INFO">${now} = 2020-10-20T12:55:37+00:00</msg>
-<status status="PASS" starttime="20201020 15:55:37.999" endtime="20201020 15:55:38.000"></status>
+<msg timestamp="20210420 11:26:46.214" level="INFO">${now} = 2021-04-20T05:56:46+00:00</msg>
+<status status="PASS" starttime="20210420 11:26:46.214" endtime="20210420 11:26:46.214"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1678,7 +1364,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:38.000" endtime="20201020 15:55:38.000"></status>
+<status status="PASS" starttime="20210420 11:26:46.215" endtime="20210420 11:26:46.215"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1686,7 +1372,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:38.000" endtime="20201020 15:55:38.001"></status>
+<status status="PASS" starttime="20210420 11:26:46.216" endtime="20210420 11:26:46.216"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the result.</doc>
@@ -1697,11 +1383,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20201020 15:55:38.001" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree"]}, "timestamp": "202...</msg>
-<status status="PASS" starttime="20201020 15:55:38.001" endtime="20201020 15:55:38.001"></status>
+<msg timestamp="20210420 11:26:46.218" level="INFO">${json_string} = {"productCode": "assemblin-test-1", "parameters": {"ids": [{"idProperty": "AI200", "idRoom": "A4018"}], "dataTypes": ["MeasureAirCO2LevelPPM", "MeasureAirTemperatureCelsiusDegree", "MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:46.216" endtime="20210420 11:26:46.218"></status>
 </kw>
-<msg timestamp="20201020 15:55:38.002" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree']}, 'timestamp': '202...</msg>
-<status status="PASS" starttime="20201020 15:55:37.998" endtime="20201020 15:55:38.002"></status>
+<msg timestamp="20210420 11:26:46.218" level="INFO">${body} = {'productCode': 'assemblin-test-1', 'parameters': {'ids': [{'idProperty': 'AI200', 'idRoom': 'A4018'}], 'dataTypes': ['MeasureAirCO2LevelPPM', 'MeasureAirTemperatureCelsiusDegree', 'MeasureAirHumidity...</msg>
+<status status="PASS" starttime="20210420 11:26:46.211" endtime="20210420 11:26:46.218"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1709,7 +1395,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>dataTypes=@{EMPTY}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:38.002" endtime="20201020 15:55:38.002"></status>
+<status status="PASS" starttime="20210420 11:26:46.219" endtime="20210420 11:26:46.220"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -1723,16 +1409,16 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20201020 15:55:38.003" level="INFO">${signature} = KDBiF63U0EeU5lr80XkkmgifHdl3sW2s/PYlSDGxRDw=</msg>
-<status status="PASS" starttime="20201020 15:55:38.003" endtime="20201020 15:55:38.003"></status>
+<msg timestamp="20210420 11:26:46.221" level="INFO">${signature} = NAWt/22K6ieq1w1YbOr/kp9gIa+0BlWyT1SYqgqCk0Y=</msg>
+<status status="PASS" starttime="20210420 11:26:46.221" endtime="20210420 11:26:46.221"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${signature}</arg>
 </arguments>
-<msg timestamp="20201020 15:55:38.004" level="INFO">KDBiF63U0EeU5lr80XkkmgifHdl3sW2s/PYlSDGxRDw=</msg>
-<status status="PASS" starttime="20201020 15:55:38.004" endtime="20201020 15:55:38.004"></status>
+<msg timestamp="20210420 11:26:46.222" level="INFO">NAWt/22K6ieq1w1YbOr/kp9gIa+0BlWyT1SYqgqCk0Y=</msg>
+<status status="PASS" starttime="20210420 11:26:46.221" endtime="20210420 11:26:46.222"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -1742,7 +1428,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:38.004" endtime="20201020 15:55:38.004"></status>
+<status status="PASS" starttime="20210420 11:26:46.222" endtime="20210420 11:26:46.222"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -1750,10 +1436,10 @@
 </tags>
 <doc>*Sends a POST request to the endpoint.*</doc>
 <arguments>
-<arg>${API_PATH}</arg>
+<arg>${CONNECTOR_PATH}</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:38.004" endtime="20201020 15:55:38.338"></status>
+<status status="PASS" starttime="20210420 11:26:46.223" endtime="20210420 11:26:54.734"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -1763,87 +1449,63 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20201020 15:55:38.339" level="INFO">
+<msg timestamp="20210420 11:26:54.735" level="INFO">
 {
     "type": "object",
     "properties": {
-        "error": {
+        "@context": {
+            "type": "string",
+            "default": "https://standards-ontotest.oftrust.net/v2/Context/DataProductOutput/Sensor/"
+        },
+        "data": {
             "type": "object",
             "properties": {
-                "message": {
-                    "type": "string",
-                    "default": "External translator returns an invalid response."
-                },
-                "status": {
-                    "type": "integer",
-                    "default": 502
-                },
-                "translator_response": {
-                    "type": "object",
-                    "properties": {
-                        "status": {
-                            "type": "integer",
-                            "default": 422
-                        },
-                        "data": {
-                            "type": "object",
-                            "properties": {
-                                "error": {
-                                    "type": "object",
-                                    "properties": {
-                                        "status": {
-                                            "type": "integer",
-                                            "default": 422
-                                        },
-                                        "message": {
-                                            "type": "object",
-                                            "properties": {
-                                                "parameters.dataTypes[0]": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    },
-                                                    "default": [
-                                                        "Missing data for required field."
-                                                    ]
-                                                }
-                                            },
-                                            "required": [
-                                                "parameters.dataTypes[0]"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "message",
-                                        "status"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "error"
-                            ]
-                        }
-                    },
-                    "required": [
-                        "data",
-                        "status"
-                    ]
+                "sensors": {
+                    "type": "array",
+                    "default": []
                 }
             },
             "required": [
-                "message",
-                "status",
-                "translator_response"
+                "sensors"
+            ]
+        },
+        "signature": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "default": "RsaSignature2018"
+                },
+                "created": {
+                    "type": "string",
+                    "default": "2021-04-20T11:26:54+05:30"
+                },
+                "creator": {
+                    "type": "string",
+                    "default": "https://localhost/assemblin/translator/v1/public.key"
+                },
+                "signatureValue": {
+                    "type": "string",
+                    "default": "OQphIa2ZcH5E3nCa162ETyRLjKo2kG8vCtR/+bactitTaEF/Q+Yrv9TQgl4MI5WLzqQ2Tqbw/TXJgU3bThpQCqGOUyBZm0GotqwffuTGUXZm29dlrBIcBsYsvHn8+bQ5VoRVwU1p+QNCwXV6YYhx1X2VJO/VwSA09+1wf6/FKrX6L7RcH26tDRgXwQmJcuDrHS1v40MIgSPYnNvQn4jTjD2HHtyMY/6GUcUx92Dw2WooPOBKfOebx63TaIXMGC2lhAROQQZpKFM+bSludVXOZ7DyLFNsI5DWZqKZt0mcb4mV53aYowSstjkiqGFACYeROAjii4e4Mdy+3zpbhYOqjwerzI2OvouJV0uxkExQpG83p/t6bCJwLGZ4kpdnn9LdyPCkCjkc1rUyb271FE3fa4uJsn7TOHFSNI2yi5SgBrPJpPrn7CShSr6tsPAqh/s0CGKaQ5AOO9rETCbKMIs3CsNqr9PUGzvP9I78X+tBX5gnYRWbE4owkxDl0x4UwRLkxGUIQGEJ8O6CWt2PtccUiJmLe66euxnQuo5lcZ8qikLHfBe5FC3oJmC1Pk78GJGq2FLC5Ggt0Ovs+G0j7Wo61cPE0hFOxsiEGv9utcNCGTcZ9em8t5AvflImsMEddyKf2aypgSpHbpMNK2skwN4zbrk6swRWOd3QEFEZetTBvv0="
+                }
+            },
+            "required": [
+                "created",
+                "creator",
+                "signatureValue",
+                "type"
             ]
         }
     },
     "required": [
-        "error"
+        "@context",
+        "data",
+        "signature"
     ]
 }</msg>
-<status status="PASS" starttime="20201020 15:55:38.338" endtime="20201020 15:55:38.346"></status>
+<status status="PASS" starttime="20210420 11:26:54.735" endtime="20210420 11:26:54.746"></status>
 </kw>
-<status status="PASS" starttime="20201020 15:55:38.003" endtime="20201020 15:55:38.347"></status>
+<status status="PASS" starttime="20210420 11:26:46.220" endtime="20210420 11:26:54.746"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1854,64 +1516,44 @@
 <arg>response status</arg>
 <arg>502</arg>
 </arguments>
-<status status="PASS" starttime="20201020 15:55:38.347" endtime="20201020 15:55:38.348"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error status</arg>
-<arg>502</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:38.349" endtime="20201020 15:55:38.350"></status>
-</kw>
-<kw name="Integer" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON integer.*</doc>
-<arguments>
-<arg>response body error translator_response status</arg>
-<arg>422</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:38.350" endtime="20201020 15:55:38.351"></status>
-</kw>
-<kw name="String" library="REST">
-<tags>
-<tag>assertions</tag>
-</tags>
-<doc>*Asserts the field as JSON string.*</doc>
-<arguments>
-<arg>response body error translator_response data error message parameters.dataTypes[0] 0</arg>
-<arg>Missing data for required field.</arg>
-</arguments>
-<status status="PASS" starttime="20201020 15:55:38.352" endtime="20201020 15:55:38.353"></status>
+<msg timestamp="20210420 11:26:54.749" level="FAIL">200 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    200</msg>
+<status status="FAIL" starttime="20210420 11:26:54.747" endtime="20210420 11:26:54.749"></status>
 </kw>
 <tags>
 <tag>bug-0006</tag>
 </tags>
-<status status="PASS" starttime="20201020 15:55:37.998" endtime="20201020 15:55:38.353" critical="yes"></status>
+<status status="FAIL" starttime="20210420 11:26:46.210" endtime="20210420 11:26:54.750" critical="yes">200 is not one of [502]
+
+Failed validating 'enum' in schema:
+    {'enum': [502], 'type': 'integer'}
+
+On instance:
+    200</status>
 </test>
 <doc>Assemblin Temperature / CO2 sensors</doc>
-<status status="PASS" starttime="20201020 15:55:31.118" endtime="20201020 15:55:38.355"></status>
+<status status="FAIL" starttime="20210420 11:24:18.744" endtime="20210420 11:26:54.755"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="0">Critical Tests</stat>
-<stat pass="7" fail="0">All Tests</stat>
+<stat pass="1" fail="6">Critical Tests</stat>
+<stat pass="1" fail="6">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0">bug-0001</stat>
-<stat pass="1" fail="0">bug-0002</stat>
-<stat pass="1" fail="0">bug-0003</stat>
-<stat pass="1" fail="0">bug-0004</stat>
-<stat pass="1" fail="0">bug-0005</stat>
-<stat pass="1" fail="0">bug-0006</stat>
+<stat pass="1" fail="1">bug-0001</stat>
+<stat pass="0" fail="1">bug-0002</stat>
+<stat pass="0" fail="1">bug-0003</stat>
+<stat pass="0" fail="1">bug-0004</stat>
+<stat pass="0" fail="1">bug-0005</stat>
+<stat pass="0" fail="1">bug-0006</stat>
 </tag>
 <suite>
-<stat pass="7" fail="0" id="s1" name="Connector Tests">Connector Tests</stat>
+<stat pass="1" fail="6" id="s1" name="Connector Tests">Connector Tests</stat>
 </suite>
 </statistics>
 <errors>
