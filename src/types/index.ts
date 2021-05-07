@@ -20,7 +20,8 @@ interface GreenlockSiteConfig {
 
 interface Measurement {
   "@type": MEASUREMENT_TYPE;
-  value: number;
+  value: any;
+  timestamp: any;
 }
 
 interface AssemblinIds {

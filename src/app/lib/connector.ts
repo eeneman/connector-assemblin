@@ -74,6 +74,17 @@ export const translateRequestData = async (requestBody: ConnectorRequestBody): P
   return sensors;
 };
 
+
+/**
+ * 
+ * timestamp format
+ */
+
+ const timeStamp = ()=>{
+  let currentTime = new Date().toISOString();
+  return currentTime.split('.')[0] + "+00:00";
+}
+
 /**
  * Adds a value to an existing sensor entry
  * 
@@ -83,7 +94,8 @@ export const translateRequestData = async (requestBody: ConnectorRequestBody): P
  */
 const addValueToExistingSensorEntry = (sensors: Sensor[], existingEntry: Sensor, assemblinSensor: AssemblinSensor) => {
   const existingEntryIndex = sensors.findIndex(sensorEntry => sensorEntry === existingEntry);
-  existingEntry.measurements.push({ value: assemblinSensor.value, "@type": assemblinTypeToPot[assemblinSensor.type] });
+  const newValue = ( (assemblinSensor.type === "OCC") ? ((assemblinSensor.value == 0) ? false : true ) :  assemblinSensor.value)
+  existingEntry.measurements.push({ "@type": assemblinTypeToPot[assemblinSensor.type], timestamp: timeStamp(), value: newValue });
   sensors[existingEntryIndex] = existingEntry;
 }
 
@@ -121,7 +133,7 @@ const findExistingSensorEntry = (sensors: Sensor[], newAssemblinSensor: Assembli
  */
 const translateData = (assemblinSensor: AssemblinSensor): Sensor => {
   return {
-    measurements: [{ value: assemblinSensor.value, "@type": assemblinTypeToPot[assemblinSensor.type] }],
+    measurements: [{"@type": assemblinTypeToPot[assemblinSensor.type], timestamp: timeStamp(), value: assemblinSensor.value}],
     id: { idRoom: assemblinSensor.room, idProperty: assemblinSensor.property }
   }
 }
