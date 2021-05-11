@@ -28,6 +28,6 @@ export const publicKeyURLs = [
 
 /** Context URLs. */
 export const contextURLs = {
-  DataProduct: 'https://standards-ontotest.oftrust.net/v2/Context/DataProductOutput/Sensor/'
+  DataProduct: 'https://standards.oftrust.net/v2/Context/DataProductContext/Sensor/'
 };
 

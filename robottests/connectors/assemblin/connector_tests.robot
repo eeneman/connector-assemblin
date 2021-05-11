@@ -87,7 +87,7 @@ fetch, 200
     ${body}               Get Body
     Fetch Data Product    ${body}
     Integer               response status                                                           200
-    String                response body @context                                                    https://standards-ontotest.oftrust.net/v2/Context/DataProductOutput/Sensor/
+    String                response body @context                                                    https://standards.oftrust.net/v2/Context/DataProductContext/Sensor/
     Object                response body data
     Array                 response body data sensors
     Array                 response body data sensors 0 measurements
