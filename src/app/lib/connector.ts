@@ -63,7 +63,6 @@ export const translateRequestData = async (requestBody: ConnectorRequestBody): P
   assemblinDataResponse.data.forEach((assemblinSensor: AssemblinSensor) => {
     const existingEntry = findExistingSensorEntry(sensors, assemblinSensor);
     const isRequested = checkIsSensorRequested(requestBody, assemblinSensor);
-    
     if (!existingEntry && isRequested) {
       sensors.push(translateData(assemblinSensor));
     } else if (existingEntry && isRequested){
@@ -132,8 +131,9 @@ const findExistingSensorEntry = (sensors: Sensor[], newAssemblinSensor: Assembli
  * @returns translated sensor 
  */
 const translateData = (assemblinSensor: AssemblinSensor): Sensor => {
+  const newValue = ( (assemblinSensor.type === "OCC") ? ((assemblinSensor.value == 0) ? false : true ) :  assemblinSensor.value)
   return {
-    measurements: [{"@type": assemblinTypeToPot[assemblinSensor.type], timestamp: timeStamp(), value: assemblinSensor.value}],
+    measurements: [{"@type": assemblinTypeToPot[assemblinSensor.type], timestamp: timeStamp(), value: newValue}],
     id: { idRoom: assemblinSensor.room, idProperty: assemblinSensor.property }
   }
 }

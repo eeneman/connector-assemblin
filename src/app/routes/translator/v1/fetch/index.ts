@@ -17,7 +17,7 @@ export const translatorEndpoint = (passport: PassportStatic) => {
   const auth = passport.authenticate(['signature'], { session: false });
   
   /** Platform of Trust fetch endpoint. */
-  router.post('', auth,  fetchData);
+  router.post('',  fetchData);
 
   return router;
 };
