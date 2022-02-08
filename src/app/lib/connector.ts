@@ -131,7 +131,12 @@ const findExistingSensorEntry = (sensors: Sensor[], newAssemblinSensor: Assembli
  * @returns translated sensor 
  */
 const translateData = (assemblinSensor: AssemblinSensor): Sensor => {
-  const newValue = ( (assemblinSensor.type === "OCC") ? ((assemblinSensor.value == 0) ? false : true ) :  assemblinSensor.value)
+  let newValue
+  if(assemblinSensor.type==="MWh"){
+    newValue = assemblinSensor.value * 1000
+  }else{
+    newValue = ( (assemblinSensor.type === "OCC") ? ((assemblinSensor.value == 0) ? false : true ) :  assemblinSensor.value)
+  }
   return {
     measurements: [{"@type": assemblinTypeToPot[assemblinSensor.type], timestamp: timeStamp(), value: newValue}],
     id: { idRoom: assemblinSensor.room, idProperty: assemblinSensor.property }
