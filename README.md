@@ -54,8 +54,12 @@ Below are few examples of the Assemblin request body and parameters
          }
       ],
       "dataTypes":[
-		  "MeasureAirCO2LevelPPM", 
-		  "MeasureAirTemperatureCelsiusDegree"
+				"MeasureElectricityConsumptionKilowattHour",
+				"MeasureAirCO2LevelPPM",
+				"MeasureAirTemperatureCelsiusDegree",
+				"MeasureAirHumidityPercent",
+				"MeasureOccupancy",
+				"MeasureHeatingElectricityConsumptionKilowattHour"
       ]
    },
    "@context": "https://standards-ontotest.oftrust.net/v2/Context/DataProductContext/Sensor/",

@@ -14,9 +14,9 @@ ${CONNECTOR_URL}             http://localhost:8080
 ${CONNECTOR_PATH}            /assemblin/translator/v1/fetch
 ${APP_TOKEN}                 %{POT_APP_ACCESS_TOKEN}
 ${CLIENT_SECRET}             %{POT_CLIENT_SECRET}
-${PRODUCT_CODE}             %{POT_PRODUCT_CODE}
+${PRODUCT_CODE}              %{POT_PRODUCT_CODE}
 ${ID_PROPERTY}               AI200
-${ID_ROOM}                   A4018
+${ID_ROOM}                   A0 PK 12
 
 ${DATA_TYPE_1}               MeasureAirCO2LevelPPM
 ${DATA_TYPE_2}               MeasureAirTemperatureCelsiusDegree
