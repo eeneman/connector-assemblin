@@ -133,7 +133,7 @@ const findExistingSensorEntry = (sensors: Sensor[], newAssemblinSensor: Assembli
 const translateData = (assemblinSensor: AssemblinSensor): Sensor => {
   let newValue
   if(assemblinSensor.type==="MWh"){
-    newValue = assemblinSensor.value * 1000
+    newValue = (assemblinSensor.value * 1000).toString();
   }else{
     newValue = ( (assemblinSensor.type === "OCC") ? ((assemblinSensor.value == 0) ? false : true ) :  assemblinSensor.value)
   }
